@@ -9,11 +9,12 @@ import Homepage from './components/Homepage';
 import Therapist from './components/Therapist';
 import Donate from './components/Donate';
 import Navbar from './components/Navbar';
+import App from '../src/App'
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Homepage />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

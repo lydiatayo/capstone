@@ -2,7 +2,6 @@ import React from 'react';
 import { useState } from "react";
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import {Link } from "react-router-dom"
 import Capstone from '../components/Capstone.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -18,19 +17,23 @@ import test3 from './images/test3.png';
 import hero from './images/hero.png';
 import Carousel from 'react-bootstrap/Carousel';
 import Navbar from './Navbar';
-
+import { Link } from "react-router-dom";
 
 function Homepage() {
     return (
         <div>
+            <Navbar />
             <Container fluid className="home-header" style={{ backgroundImage: `url(${hero}` }}>
                 <Row>
                     <Col sm={1}/>
                     <Col sm={6}>
                         <h1 className='title'> Need emergency help from an abusive situation? </h1>
                         <h3 className='subtitle'> Get help from qualified therapists and counsellors today.</h3>
-                         <Button className='home-button'> GET QUICK HELP</Button>
-                         <Button className='button'> GET  THERAPY</Button>
+                        <Link to="/location"> <Button className='home-button'> GET QUICK HELP</Button> </Link>
+                         <Link to="/therapist">
+                            <Button className='button'> GET  THERAPY</Button>
+                         </Link>
+                         
                     </Col>
                 <Col />
                 </Row>

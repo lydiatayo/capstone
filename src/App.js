@@ -1,24 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import Homepage from './components/Homepage';
+import Volunteer from './components/Volunteer';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Donate from './components/Donate';
+import Therapist from './components/Therapist';
+import { Navbar } from 'react-bootstrap';
+import Location from './components/Location';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Homepage/>}/>
+        <Route path="/volunteer" element={<Volunteer/>}/>
+        <Route path="/donate" element={<Donate/>}/>
+        <Route path="/therapist" element={<Therapist/>}/>
+        <Route path="/location" element={<Location/>}/>
+      </Routes>
+    </Router>
   );
 }
 

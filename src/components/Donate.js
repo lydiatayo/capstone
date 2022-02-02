@@ -7,13 +7,14 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Footer from './Footer';
+import Navbar from './Navbar';
 
 const Donate = () => {
     return (
 <div> 
-
+    <Navbar />
 <Container fluid className="blog-header" style={{ backgroundImage: `url(${combined}` }}>
                 <Row>
                     <Col />

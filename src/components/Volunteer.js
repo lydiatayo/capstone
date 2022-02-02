@@ -6,12 +6,14 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Navbar from './Navbar';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Footer from './Footer';
 
 const Volunteer = () => {
     return (
         <div>
+            <Navbar />
             <Container fluid className='faq-header'>
                 <Row>
                     <Col className='therapist-h1'>Join With Us</Col>
