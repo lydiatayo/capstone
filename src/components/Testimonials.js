@@ -16,7 +16,7 @@ function Testimonials() {
                 <div className="container px-5">
                     <div className="row">
                         <div className="col">
-                        <h1 class="fw-bolder mb-3 text-center text-dark" >Testimonials</h1>
+                        <h1 className="fw-bolder mb-3 text-center text-dark" >Testimonials</h1>
                         </div>
                     </div>
                 </div>
@@ -29,38 +29,38 @@ function Testimonials() {
                     <div className="row justify-content-center">
                         <div className="col-lg-12 col-xl-10"  style={{backgroundColor:'#fff', marginTop:'-100px' }}>
                             <div className="my-5 mx-5">
-                            <div class="row gx-5 align-items-center">
-                        <div class="col-lg-3"><img class="img-fluid rounded mb-5 mb-lg-0" src={FeaturedImage} style={{width:'200px', height:'200px'}} alt="..." /></div>
-                        <div class="col-lg-9">
-                            <h2 class="fw-bolder">Mission</h2>
-                            <p class="lead fw-normal text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto est, ut esse a labore aliquam beatae expedita. Blanditiis impedit numquam libero molestiae et fugit cupiditate, quibusdam expedita, maiores eaque quisquam.</p>
+                            <div className="row gx-5 align-items-center">
+                        <div className="col-lg-3"><img className="img-fluid rounded mb-5 mb-lg-0" src={FeaturedImage} style={{width:'200px', height:'200px'}} alt="..." /></div>
+                        <div className="col-lg-9">
+                            <h2 className="fw-bolder">Mission</h2>
+                            <p className="lead fw-normal text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto est, ut esse a labore aliquam beatae expedita. Blanditiis impedit numquam libero molestiae et fugit cupiditate, quibusdam expedita, maiores eaque quisquam.</p>
                         </div>
                     </div>
                     <hr />
 
-                    <div class="row gx-5 align-items-center">
-                        <div class="col-lg-3"><img class="img-fluid rounded mb-5 mb-lg-0" src={FeaturedImage} style={{width:'200px', height:'200px'}} alt="..." /></div>
-                        <div class="col-lg-9">
-                            <h2 class="fw-bolder">Mission</h2>
-                            <p class="lead fw-normal text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto est, ut esse a labore aliquam beatae expedita. Blanditiis impedit numquam libero molestiae et fugit cupiditate, quibusdam expedita, maiores eaque quisquam.</p>
+                    <div className="row gx-5 align-items-center">
+                        <div className="col-lg-3"><img className="img-fluid rounded mb-5 mb-lg-0" src={FeaturedImage} style={{width:'200px', height:'200px'}} alt="..." /></div>
+                        <div className="col-lg-9">
+                            <h2 className="fw-bolder">Mission</h2>
+                            <p className="lead fw-normal text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto est, ut esse a labore aliquam beatae expedita. Blanditiis impedit numquam libero molestiae et fugit cupiditate, quibusdam expedita, maiores eaque quisquam.</p>
                         </div>
                     </div>
                     <hr />
 
-                    <div class="row gx-5 align-items-center">
-                        <div class="col-lg-3"><img class="img-fluid rounded mb-5 mb-lg-0" src={FeaturedImage} style={{width:'200px', height:'200px'}} alt="..." /></div>
-                        <div class="col-lg-9">
-                            <h2 class="fw-bolder">Mission</h2>
-                            <p class="lead fw-normal text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto est, ut esse a labore aliquam beatae expedita. Blanditiis impedit numquam libero molestiae et fugit cupiditate, quibusdam expedita, maiores eaque quisquam.</p>
+                    <div className="row gx-5 align-items-center">
+                        <div className="col-lg-3"><img className="img-fluid rounded mb-5 mb-lg-0" src={FeaturedImage} style={{width:'200px', height:'200px'}} alt="..." /></div>
+                        <div className="col-lg-9">
+                            <h2 className="fw-bolder">Mission</h2>
+                            <p className="lead fw-normal text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto est, ut esse a labore aliquam beatae expedita. Blanditiis impedit numquam libero molestiae et fugit cupiditate, quibusdam expedita, maiores eaque quisquam.</p>
                         </div>
                     </div>
                     <hr />
 
-                    <div class="row gx-5 align-items-center">
-                        <div class="col-lg-3"><img class="img-fluid rounded mb-5 mb-lg-0" src={FeaturedImage} style={{width:'200px', height:'200px'}} alt="..." /></div>
-                        <div class="col-lg-9">
-                            <h2 class="fw-bolder">Mission</h2>
-                            <p class="lead fw-normal text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto est, ut esse a labore aliquam beatae expedita. Blanditiis impedit numquam libero molestiae et fugit cupiditate, quibusdam expedita, maiores eaque quisquam.</p>
+                    <div className="row gx-5 align-items-center">
+                        <div className="col-lg-3"><img className="img-fluid rounded mb-5 mb-lg-0" src={FeaturedImage} style={{width:'200px', height:'200px'}} alt="..." /></div>
+                        <div className="col-lg-9">
+                            <h2 className="fw-bolder">Mission</h2>
+                            <p className="lead fw-normal text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto est, ut esse a labore aliquam beatae expedita. Blanditiis impedit numquam libero molestiae et fugit cupiditate, quibusdam expedita, maiores eaque quisquam.</p>
                         </div>
                     </div>
                     <hr />

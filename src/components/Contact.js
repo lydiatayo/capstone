@@ -33,24 +33,24 @@ function Contact() {
                             <div className="my-5 mx-5">
                                 
                             <Form>
-                            <div class="form-floating mb-3">
-                                        <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                            <div className="form-floating mb-3">
+                                        <input className="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
                                         <label for="name">Full name</label>
-                                        <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                                        <div className="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                                     </div>
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                    <div className="form-floating mb-3">
+                                        <input className="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
                                         <label for="email">Email address</label>
-                                        <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                        <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                                        <div className="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                        <div className="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                                     </div>
-                                    <div class="form-floating mb-3">
-                                        <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style={{height: "10rem"}} data-sb-validations="required"></textarea>
+                                    <div className="form-floating mb-3">
+                                        <textarea className="form-control" id="message" type="text" placeholder="Enter your message here..." style={{height: "10rem"}} data-sb-validations="required"></textarea>
                                         <label for="message">Message</label>
-                                        <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                                        <div className="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                                     </div>
-                                    <div class="d-grid">
-                                        <button class="btn btn-success btn-lg" id="submitButton" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Submit</button>
+                                    <div className="d-grid">
+                                        <button className="btn btn-success btn-lg" id="submitButton" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Submit</button>
                                         </div>
                         </Form>
 
@@ -65,12 +65,12 @@ function Contact() {
             
 <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div className="modal-dialog" style={{padding:'40px'}}>
-    <div className="modal-content">
+    <div className="modal-content"> 
       <div className="modal-body">
         <h5> We got your submission and we will reach out to your shortly </h5>
       </div>
       <div className="modal-footer">
-        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+        <button type="button" className="btn btn-success" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>

@@ -48,7 +48,7 @@ function Footer() {
                             <div className="row mb-3">
                                 <h6 className='mb-3'>Contact Us</h6>
                                 <ul className='unordered-list' style={{color:'#fff', textDecoration:'none'}}>
-                                <li> <i class="fas fa-phone"></i> +2348012345678 </li>
+                                <li> <i className="fas fa-phone"></i> +2348012345678 </li>
                                     <li> <i className="bi bi-geo-alt"></i> 123 John Doe St, Lagos.</li>
                                 </ul>
                             </div>
