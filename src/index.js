@@ -13,7 +13,7 @@ import Navbar from './components/Navbar';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Homepage />
+    <Homepage/>
   </React.StrictMode>,
   document.getElementById('root')
 );
