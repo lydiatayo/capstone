@@ -1,108 +1,90 @@
 import React, { useReducer, useState } from 'react';
 import Capstone from '../components/Capstone.css';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { Link } from "react-router-dom";
 
 
 function Footer() {
-    const [textarea, setTextarea] = useState(
-        "Message"
-    );
-
-    const [inputs, setInputs] = useState({});
-
-    const handleChange = (event) => {
-        const name = event.target.name;
-        const value = event.target.value;
-        setTextarea(event.target.value)
-        setInputs(values => ({ ...values, [name]: value }))
-    }
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        alert('We Got Your Submission')
-    }
-
 
     return (
         <div>
-            <Container fluid className='footer-container'>
-            <Row>
-            <Col sm={5} className='contact-footer'>
-                    <h5> Send us a Message</h5>
-                    <br />
-                    <Form onSubmit={handleSubmit}>
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                            <Form.Control type="text" placeholder="Full Name" value={inputs.username || ""}
-                                onChange={handleChange} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
-                            <Form.Control type="email" placeholder="Email Address" value={inputs.email || ""}
-                                onChange={handleChange} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                            <Form.Control as="textarea" rows={5} value={textarea} onChange={handleChange} />
-                        </Form.Group>
-                        <Button variant="primary" type="submit" className='contact-footer-btn'>
-                            Send
-                        </Button>
-                    </Form>
-                </Col>
+            <section className="py-5" style={{ backgroundColor: '#40A5E9', color:'#fff' }}>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-4 p-5">
+                            <h6 className='mb-4'>Send us a message</h6>
+                            <Form>
+                                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                    <Form.Control type="text" placeholder="Full Name"/>
+                                </Form.Group>
+                                <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
+                                    <Form.Control type="email" placeholder="Email Address"/>
+                                </Form.Group>
+                                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                                    <Form.Control as="textarea" rows={5} placeholder="Message"/>
+                                </Form.Group>
+                                <Button variant="secondary" type="submit" className='contact-footer-btn'>
+                                    Send
+                                </Button>
+                            </Form>
+                        </div>
 
-                <Col sm={4} className='contact-sub'>
-                    <h5> Signup for Newsletter</h5>
-                    <Form>
-                        <Row>
-                            <Col>
-                                <Form.Control placeholder="First name" />
-                            </Col>
-                            <Col>
-                                <Button variant="primary" type="submit" className='newsletter-button'> Subscribe </Button>
-                            </Col>
-                        </Row>
-                    </Form>
+                        <div className="col-5 p-5">
+                            <h6 className='mb-4'>Subscribe to our Newsletter</h6>
+                            <div className="row">
+                            <div className="row">
+                                <div className="col">
+                                    <input type="email" className="form-control" placeholder="janedoes@gmail.com" aria-label="Email" />
+                                </div>
+                                <div className="col">
+                                    <button type="button" className="contact-footer-btn ">Subscribe</button>
+                                </div>
+                            </div>
+                               
+                            </div>
+                            <br />
+                            <div className="row mb-3">
+                                <h6 className='mb-3'>Contact Us</h6>
+                                <ul className='unordered-list' style={{color:'#fff', textDecoration:'none'}}>
+                                <li> <i class="fas fa-phone"></i> +2348012345678 </li>
+                                    <li> <i className="bi bi-geo-alt"></i> 123 John Doe St, Lagos.</li>
+                                </ul>
+                            </div>
+                            <div className="row">
+                            <a class="btn btn-light btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-light btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-light btn-social mx-2" href="#!"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div className="col-3 p-5">
+                        <h6 className='mb-4'>Quick Links</h6>
+                        <ul className='unordered-list'>
+                        <li className='unordered-list'> <Link to="/About" style={{color:'#fff', textDecoration:'none'}}>About Us</Link> </li>
+                                <li className='unordered-list'> <Link to="/QuickHelp" style={{color:'#fff', textDecoration:'none'}}>Get Help</Link> </li>
+                                <li className='unordered-list'> <Link to="/Therapy" style={{color:'#fff', textDecoration:'none'}}>Get Therapy</Link> </li>
+                                <li className='unordered-list'> <Link to="/Volunteer" style={{color:'#fff', textDecoration:'none'}}>Volunteer</Link> </li>
+                                <li className='unordered-list'> <Link to="/Blog" style={{color:'#fff', textDecoration:'none'}}>Blog</Link> </li>
+                                <li className='unordered-list'> <Link to="/Faq" style={{color:'#fff', textDecoration:'none'}}>FAQ</Link> </li>
 
-                    <br />
-
-                    <h5> Contact Us </h5>
-                    <p><i className="bi bi-telephone-inbound"></i>..+2348047297374</p>
-                   <p><i className="bi bi-geo-alt"></i>123 John Doe St. Lagos</p>
-                   <i className="bi bi-facebook" ></i>
-                   <i className="bi bi-facebook" ></i>
-                   <i className="bi bi-facebook" ></i>
-                </Col>
-                <Col sm={3} className='contact-quick-links'>
-                    <h5> Quick Links </h5>
-                    <br />
-                <a>Home</a>
-                <br />
-                    <a>About us</a>
-                    <br />
-                    <a>Contact us</a>
-                    <br />
-                    <a>Blogs</a>
-                    <br />
-                    <a>FAQs</a>
-                    <br />
-                    <a>Volunteer</a>
-                </Col>
-            </Row>
-        </Container>
-
-        <Container fluid className='footer-copyright'>
-            <Row>
-                <Col>
-                <p className='p-footer'>COPYWRIGHT @ UNBOUND.COM</p>
-                </Col>
-            </Row>
-        </Container>
-        
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+{/*Copyright */}
+<section className='p-3' style={{ backgroundColor: '#0972B8', color:'#fff' }}>
+    <div className="container">
+        <div className="row">
+            <div className="col">
+            <p className="lead fw-normal text-white-50 text-center mb-2" style={{fontSize:'14px'}}>COPYRIGHT 2022 | UNBOUND.COM.</p>
+            </div>
         </div>
-        
+    </div>
+</section>
+        </div>
+
     );
 }
 

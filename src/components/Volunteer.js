@@ -14,19 +14,28 @@ const Volunteer = () => {
     return (
         <div>
             <Navbar />
-            <Container fluid className='faq-header'>
-                <Row>
-                    <Col className='therapist-h1'>Join With Us</Col>
-                    <p className='therapist-p'> Fill in the details below to be offer assistance and become a part of the good work we do </p>
-                </Row>
-            </Container>
 
-            <Container className='therapist-form'>
-                <Row>
-                    <Col />
-                    <Col sm={9}>
-                        <Form>
-                            <Form.Group className="mb-3" controlId="formGroupName">
+            <header className="py-5" style={{ backgroundColor: '#40A5E9' }}>
+                <div class="container px-5">
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="text-center my-5">
+                            <h1 class="fw-bolder text-white">Join Us</h1>
+                                <p class="lead fw-normal text-white-50 mb-0">Fill in the details below to be offer assistance and become a part of the good work we do.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section>
+                <div className="container px-5 py-5">
+                    <div className="row justify-content-center">
+                        <div className="col-lg-8 col-xl-6"  style={{backgroundColor:'#fff', marginTop:'-100px' }}>
+                            <div className="my-5 mx-5">
+                                
+                            <Form>
+                            <Form.Group className="floating form mb-3" controlId="formGroupName">
                             <Form.Label>Name</Form.Label>
                                 <Form.Control type="name" placeholder="Enter name" />
                             </Form.Group>
@@ -53,11 +62,11 @@ const Volunteer = () => {
                                 </Form.Select>
                             </Form.Group>
                             <Form.Group controlId="formFileMultiple" className="mb-3">
-                                <Form.Label>Upload Valid ID</Form.Label>
+                                <Form.Label>Upload valid ID</Form.Label>
                                 <Form.Control type="file" multiple />
                             </Form.Group>
                             <Form.Group controlId="formFileMultiple" className="mb-3">
-                                <Form.Label>Upload Professional Certifications</Form.Label>
+                                <Form.Label>Upload professional certifications</Form.Label>
                                 <Form.Control type="file" multiple />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
@@ -65,14 +74,33 @@ const Volunteer = () => {
                                 </Form.Label>
                                 <Form.Control as="textarea" rows={3} />
                             </Form.Group>
-                            <Button variant="primary" type="submit" className='button'>
+                            <Button type="submit" id="submitButton" data-bs-toggle="modal" data-bs-target="#exampleModal" className='btn btn-success btn-lg disabled'>
                                 Submit
                             </Button>
                         </Form>
-                    </Col>
-                    <Col />
-                </Row>
-            </Container>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+<div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div className="modal-dialog" style={{padding:'40px'}}>
+    <div className="modal-content">
+      <div className="modal-body">
+        <h5> We got your submission and we will reach out to your shortly </h5>
+      </div>
+      <div className="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
             <Footer />
         </div>

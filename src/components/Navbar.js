@@ -1,60 +1,74 @@
-import * as ReactBootStrap from "react-bootstrap"
-import combined from './images/combined.jpg';
 import React, { useReducer, useState } from 'react';
 import Capstone from '../components/Capstone.css';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import 'bootstrap-icons/font/bootstrap-icons.css';
 import insta from '../components/images/instagram.png'
 import logo from '../components/images/logo.png'
 import { Link } from "react-router-dom";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { ClockHistory } from 'react-bootstrap-icons';
+
+
 
 
 function Navbar() {
-  return ( 
+  return (
     <div>
-      <nav class="navbar" style={{backgroundColor: '#40A5E9'}}>
-    <div class="container-fluid">
-      <div className="col-3">
-      <img src={insta} alt="" />
-      <img src={insta} alt="" />
-      <img src={insta} alt="" />
-      </div>
-      <p style={{textAlign: 'center'}}>Helpline +23448594954453</p>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-      </form>
-    </div>
-  </nav>
-    <div className="row" style={{height: 20, marginBottom: 60, marginTop: 40}}>
-      <div className="col-3">
-        <Link to="/">
-        <img src={logo} alt=""  style={{ width: 50, height: 50, marginLeft: 30}}/>
-        </Link>
-      </div>
-      <div className="col-4" style={{ display: "flex", justifyContent: 'space-between'}}>
-        <Link to="/" style={{textDecoration: 'none'}}>
-        <span>Home</span>
-        </Link>
-        <span>About Us</span>
-        <span>Resources</span>
-        <span>Contact Us</span>
-      </div>
-      <div className="col-5" style={{ display: 'flex', justifyContent:'end'}}>
-        <Link to="/volunteer">
-        <button type="button" class="btn btn-outline-primary" style={{marginRight:30}}>Volunteer</button>
+
+      <header className="p-2" style={{backgroundColor:'#40A5E9'}}>
+      <div class="container-fluid">
+        <div className="row m-2 justify-space-evenly">
+        <div className="col">
+              <a class="btn btn-light btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-light btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-light btn-social mx-2" href="#!"><i class="fab fa-instagram"></i></a>
+              </div>
+              
+              <div className='col-6' style={{display:'flex', justifyContent:'center'}}>
+                    <p className='fw-normal pt-2 text-center' style={{ color: '#fff', fontSize: '16px' }}>Helpline +23448594954453</p>
+                    </div>
+                    <div className='col' style={{display:'flex', justifyContent:'flex-end'}}>
+                    <form class="d-flex me-2">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+          </form>
+                    </div>
+        </div>
+             
+
+                </div>
+      </header>
+        
+{/* Menu Nav*/}
+      <nav class="navbar navbar-expand-lg p-4" id="mainNav" style={{backgroundColor:"#fff"}}>
+            <div class="container ">
+              <div className="col">
+              <img src={logo} alt="" style={{width:'50px', height:'50px'}} />
+              </div>
+            
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <div className='col'>
+                    <ul class="navbar-nav ms-auto" style={{display:'flex', justifyContent:'space-around'}} >
+                        <li class="nav-item"><Link to="/" class="nav-link">Home</Link></li>
+                        <li class="nav-item"><Link to="/about" class="nav-link">About</Link></li>
+                        <li class="nav-item"><Link to="/testimonials" class="nav-link">Testimonials</Link></li>
+                        <li class="nav-item"><Link to="/blog" class="nav-link">Blog</Link></li>
+                        <li class="nav-item"><Link to="/faq" class="nav-link">FAQ</Link></li>
+                        <li class="nav-item"><Link to="/contact" class="nav-link">Contact</Link></li>
+                    </ul>
+                    </div>
+                    <div className='col' style={{display:'flex', justifyContent:'flex-end'}}>
+                    <Link to="/volunteer">
+        <button type="button" class="btn btn-outline-success" style={{marginRight:30}}>Volunteer</button>
         </Link>
         <Link to="/donate">
-        <button type="button" class="btn btn-primary" style={{marginRight:30}}>Donate Now</button>
+        <button type="button" class="btn btn-success" style={{marginRight:30}}>Donate Now</button>
         </Link>
-      </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
     </div>
-    </div>
-   );
+  );
 }
 
 export default Navbar;

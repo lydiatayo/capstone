@@ -6,10 +6,12 @@ import Blog from './components/Blog';
 import Footer from './components/Footer';
 import Volunteer from './components/Volunteer';
 import Homepage from './components/Homepage';
-import Therapist from './components/Therapist';
+import Therapy from './components/Therapy';
 import Donate from './components/Donate';
 import Navbar from './components/Navbar';
 import App from '../src/App'
+import About from './components/About';
+import { Link } from 'react-router-dom';
 
 
 ReactDOM.render(

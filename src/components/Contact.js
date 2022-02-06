@@ -2,78 +2,81 @@ import React from 'react';
 import { useState } from "react";
 import ReactDOM from 'react-dom';
 import Capstone from '../components/Capstone.css';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 import Footer from './Footer';
+import Navbar from './Navbar';
 
 
-        
-function Contact () {
 
-    const [textarea, setTextarea] = useState(
-        "The content of a textarea goes in the value attribute"
-      );
-
-    const [inputs, setInputs] = useState({});
-
-    const handleChange = (event) => {
-        const name = event.target.name;
-        const value = event.target.value;
-        setTextarea(event.target.value)
-        setInputs (values => ({...values, [name]: value}))
-    }
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    alert('We Got Your Submission')
-  }
+function Contact() {
 
     return (
         <div>
-            <Container fluid className='contact-header'>
-                <Row>
-                    <Col> </Col>
-                    <Col sm={8}>
-                        <h1> Contact Us </h1>
-                        <br />
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                    </Col>
-                    <Col> </Col>
-                </Row>
-            </Container>
+            <Navbar />
+            <header className="py-5" style={{ backgroundColor: '#40A5E9' }}>
+                <div class="container px-5">
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="text-center my-5">
+                            <h1 class="fw-bolder text-white">Contact Us</h1>
+                                <p class="lead fw-normal text-white-50 mb-0">Egestas id senectus tellus aliquam, volutpat diam.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
 
-            <Container>
-                <Row>
-                    <Col> </Col>
-                    <Col sm={6} className='form-col'>
-                        <Form onSubmit={handleSubmit}>
-                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                <Form.Label>Full Name</Form.Label>
-                                <Form.Control type="text" placeholder="John Doe"  value={inputs.username || ""} 
-        onChange={handleChange}/>
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
-                                <Form.Label>Email address</Form.Label>
-                                <Form.Control type="email" placeholder="john@doe.com" value={inputs.email || ""} 
-          onChange={handleChange} />
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                <Form.Label>Message</Form.Label>
-                                <Form.Control as="textarea" rows={5} value={textarea} onChange={handleChange}/>
-                            </Form.Group>
-                            <Button variant="primary" type="submit" className='button'>
-                                Send
-                            </Button>
+            <section>
+                <div className="container px-5 py-5">
+                    <div className="row justify-content-center">
+                        <div className="col-lg-8 col-xl-6"  style={{backgroundColor:'#fff', marginTop:'-100px' }}>
+                            <div className="my-5 mx-5">
+                                
+                            <Form>
+                            <div class="form-floating mb-3">
+                                        <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                        <label for="name">Full name</label>
+                                        <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                        <label for="email">Email address</label>
+                                        <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                        <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style={{height: "10rem"}} data-sb-validations="required"></textarea>
+                                        <label for="message">Message</label>
+                                        <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                                    </div>
+                                    <div class="d-grid">
+                                        <button class="btn btn-success btn-lg" id="submitButton" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Submit</button>
+                                        </div>
                         </Form>
 
-                    </Col>
-                    <Col> </Col>
-                </Row>
-            </Container>
-            <Footer />
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+            
+<div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div className="modal-dialog" style={{padding:'40px'}}>
+    <div className="modal-content">
+      <div className="modal-body">
+        <h5> We got your submission and we will reach out to your shortly </h5>
+      </div>
+      <div className="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<Footer />
         </div>
     );
 }

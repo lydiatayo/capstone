@@ -1,158 +1,125 @@
-import React from 'react';
+import React, { useReducer, useState } from 'react';
+import { Link, useNavigate } from "react-router-dom";
 import Capstone from '../components/Capstone.css';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Accordion from 'react-bootstrap/Accordion';
-import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 import Footer from './Footer';
+import Navbar from './Navbar';
 
 
 
 function Faq() {
   return (
     <div>
-      <Container fluid className='faq-header'>
-      <Row>
-        <Col className='header'>Frequently Asked Questions</Col>
-      </Row>
-      </Container>
+      <Navbar />
 
-      <Container className='faq-main'>
-      <Row>
-        <Col> </Col>
-        <Col sm={9}>
-        <Accordion defaultActiveKey={['0']} alwaysOpen>
-  <Accordion.Item eventKey="0">
-    <Accordion.Header> <h3 className='accord-header'> Accordion Item #1 </h3> </Accordion.Header>
-    <Accordion.Body>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="1">
-  <Accordion.Header> <h3 className='accord-header'> Accordion Item #2 </h3> </Accordion.Header>
-    <Accordion.Body>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="2">
-  <Accordion.Header> <h3 className='accord-header'> Accordion Item #3 </h3> </Accordion.Header>
-    <Accordion.Body>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="3">
-  <Accordion.Header> <h3 className='accord-header'> Accordion Item #4 </h3> </Accordion.Header>
-    <Accordion.Body>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="4">
-  <Accordion.Header> <h3 className='accord-header'> Accordion Item #1 </h3> </Accordion.Header>
-    <Accordion.Body>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="5">
-  <Accordion.Header> <h3 className='accord-header'> Accordion Item #1 </h3> </Accordion.Header>
-    <Accordion.Body>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="6">
-  <Accordion.Header> <h3 className='accord-header'> Accordion Item #1 </h3> </Accordion.Header>
-    <Accordion.Body> 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="7">
-  <Accordion.Header> <h3 className='accord-header'> Accordion Item #1 </h3> </Accordion.Header>
-    <Accordion.Body>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="8">
-  <Accordion.Header> <h3 className='accord-header'> Accordion Item #1 </h3> </Accordion.Header>
-    <Accordion.Body>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="9">
-  <Accordion.Header> <h3 className='accord-header'> Accordion Item #1 </h3> </Accordion.Header>
-    <Accordion.Body>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
-    </Accordion.Body>
-  </Accordion.Item>
-</Accordion>
-        </Col>
-        <Col> </Col>
-      </Row>
-      </Container>
+      {/* FAQ Content */}
+      <section class="py-2 my-5">
+        <div class="container px-5 my-5">
+          <div class="text-center mb-5">
+            <h1 class="fw-bolder">Frequently Asked Questions</h1>
+            <p class="lead fw-normal text-muted mb-0">How can we help you?</p>
+          </div>
+          <div class="row gx-5 justify-content-center">
+            <div class="col-xl-8">
+              <div class="accordion mb-5" id="accordionExample">
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">How can I be certain of confidentiality when using  the platform?</button></h3>
+                  <div class="accordion-collapse collapse show" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit accumsan volutpat non quis. Non cursus diam ultrices a massa. Urna, et iaculis eleifend velit magna in. Diam habitant tortor viverra nunc.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="headingTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">In what capacity can one volunteer on the platform?</button></h3>
+                  <div class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit accumsan volutpat non quis. Non cursus diam ultrices a massa. Urna, et iaculis eleifend velit magna in. Diam habitant tortor viverra nunc.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">I’m outside Nigeria, can I report a case of abuse?</button></h3>
+                  <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit accumsan volutpat non quis. Non cursus diam ultrices a massa. Urna, et iaculis eleifend velit magna in. Diam habitant tortor viverra nunc.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Can victims of abuse be connected to support groups?</button></h3>
+                  <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit accumsan volutpat non quis. Non cursus diam ultrices a massa. Urna, et iaculis eleifend velit magna in. Diam habitant tortor viverra nunc.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">How can I be certain of confidentiality when using  the platform</button></h3>
+                  <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit accumsan volutpat non quis. Non cursus diam ultrices a massa. Urna, et iaculis eleifend velit magna in. Diam habitant tortor viverra nunc.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">How can I be certain of confidentiality when using  the platform</button></h3>
+                  <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit accumsan volutpat non quis. Non cursus diam ultrices a massa. Urna, et iaculis eleifend velit magna in. Diam habitant tortor viverra nunc.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">How can I be certain of confidentiality when using  the platform</button></h3>
+                  <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit accumsan volutpat non quis. Non cursus diam ultrices a massa. Urna, et iaculis eleifend velit magna in. Diam habitant tortor viverra nunc.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">How can I be certain of confidentiality when using  the platform</button></h3>
+                  <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit accumsan volutpat non quis. Non cursus diam ultrices a massa. Urna, et iaculis eleifend velit magna in. Diam habitant tortor viverra nunc.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">How can I be certain of confidentiality when using  the platform</button></h3>
+                  <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit accumsan volutpat non quis. Non cursus diam ultrices a massa. Urna, et iaculis eleifend velit magna in. Diam habitant tortor viverra nunc.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">How can I be certain of confidentiality when using  the platform</button></h3>
+                  <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit accumsan volutpat non quis. Non cursus diam ultrices a massa. Urna, et iaculis eleifend velit magna in. Diam habitant tortor viverra nunc.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">How can I be certain of confidentiality when using  the platform</button></h3>
+                  <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit accumsan volutpat non quis. Non cursus diam ultrices a massa. Urna, et iaculis eleifend velit magna in. Diam habitant tortor viverra nunc.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>
 
-    
+
 
 
 
