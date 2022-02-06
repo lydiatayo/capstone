@@ -26,7 +26,7 @@ function Homepage() {
                                 <h1 className="display-5 fw-bolder text-white mb-2">Need emergency help from an abusive situation?</h1>
                                 <p className="lead fw-normal text-white-50 mb-2" style={{fontSize:'25px'}}>Get help from qualified therapists and counsellors today.</p>
                                 <Link to="/quickhelp"> <button className="btn btn-primary btn-lg px-4 me-sm-3">Get Quick Help</button> </Link>
-                                <Link to="/therapy"> <button className="btn btn-primary btn-lg px-4">Get Therapy Help</button> </Link>
+                                <Link to="/therapy"> <button className="btn btn-outline-light btn-lg px-4">Get Therapy Help</button> </Link>
                                 <div className="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
                                 </div>
                             </div>
