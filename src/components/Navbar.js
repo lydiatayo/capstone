@@ -46,7 +46,7 @@ function Navbar() {
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
                 <div className="collapse navbar-collapse" id="navbarResponsive">
                     <div className='col'>
-                    <ul className="navbar-nav ms-auto" style={{display:'flex', justifyContent:'space-around'}} >
+                    <ul className="navbar-nav ms-auto" style={{display:'flex', justifyContent:'center'}} >
                         <li className="nav-item"><Link to="/" className="nav-link">Home</Link></li>
                         <li className="nav-item"><Link to="/about" className="nav-link">About</Link></li>
                         <li className="nav-item"><Link to="/testimonials" className="nav-link">Testimonials</Link></li>

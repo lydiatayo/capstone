@@ -7,23 +7,15 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import Rectangle from './images/Rectangle.png';
 
 function QuickHelp () {
     return(
         <div>
-            <Navbar/>
-            <section>
-                <div className="container">
-                  <div className="row">
-                      <div className="col">
-                          
-                      </div>
-                  </div>
-                </div>
-            </section>
+            <Navbar />
             <Footer />
         </div>
-    )
+    );
 }
 
 export default QuickHelp;
