@@ -43,15 +43,26 @@ function Navbar() {
               <img src={logo} alt="" style={{width:'50px', height:'50px'}} />
               </div>
             
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+		        <span class="fa fa-bars"></span> Menu
+		      </button>
                 <div className="collapse navbar-collapse" id="navbarResponsive">
                     <div className='col'>
                     <ul className="navbar-nav ms-auto" style={{display:'flex', justifyContent:'center'}} >
                         <li className="nav-item"><Link to="/" className="nav-link">Home</Link></li>
                         <li className="nav-item"><Link to="/about" className="nav-link">About</Link></li>
-                        <li className="nav-item"><Link to="/testimonials" className="nav-link">Testimonials</Link></li>
-                        <li className="nav-item"><Link to="/blog" className="nav-link">Blog</Link></li>
-                        <li className="nav-item"><Link to="/faq" className="nav-link">FAQ</Link></li>
+                        <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                                <li className="dropdown-item"><Link to="/blog"  className="nav-link">Blog</Link></li>
+                        <li className="dropdown-item"><Link to="/faq"  className="nav-link">FAQ</Link></li>
+                        <li className="dropdown-item"><Link to="/testimonails"  className="nav-link">Testimonials</Link></li>
+                                </ul>
+                            </li>
+   
+                        
+                        
+                        
                         <li className="nav-item"><Link to="/contact" className="nav-link">Contact</Link></li>
                     </ul>
                     </div>

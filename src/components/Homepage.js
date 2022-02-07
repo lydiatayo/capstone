@@ -10,8 +10,8 @@ import headerhero from '../components/images/headerhero.png';
 import { Link } from 'react-router-dom';
 import impact2 from '../components/images/impact2.png';
 import { height } from 'dom-helpers';
-import abuseg from './images/abuseg.png';
-import therapyg from './images/therapyg.png';
+import newabuse from './images/newabuse.png';
+import newtherapy from './images/newtherapy.png';
 
 
 
@@ -41,7 +41,7 @@ function Homepage() {
                                  <h1 class="fw-bolder text-white" style={{fontSize:'50px'}}>Need emergency help from an abusive situation?</h1>
                                  <Link to="/quickhelp"> <button className="btn btn-primary btn-lg px-4 me-sm-3">Get Quick Help</button> </Link>
                             </div>
-                            <img src={abuseg} class="d-block w-100" alt="..." />
+                            <img src={newabuse} class="d-block w-100" alt="..." />
                         </div>
                         <div class="carousel-item">
                             <div className="overlay" style={{
@@ -57,7 +57,7 @@ function Homepage() {
                                
                                 <Link to="/therapy"> <button className="btn btn-primary btn-lg px-4 me-sm-3">Get Therapy</button> </Link>
                             </div>
-                            <img src={therapyg} class="d-block w-100" alt="..." />
+                            <img src={newtherapy} class="d-block w-100" alt="..." />
                         </div>
                     </div>
                 </div>
