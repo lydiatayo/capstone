@@ -11387,3 +11387,14 @@ html {
   font-size: 1rem;
   line-height: 2.5rem;
 }
+.counter{
+  width: 150px;
+height: 150px;
+border-radius: 50%;
+border: 6px solid #40A5E9;
+border-radius: 100%;
+text-align: center;
+padding-top: 40px;
+color: #40A5E9;
+font-size: 30px;
+}
